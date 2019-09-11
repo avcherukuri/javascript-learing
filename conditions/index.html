@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <style>
+        .box {
+               height: 200px;
+               width: 200px;
+               background-color: red;
+               border-radius:10px;
+               margin-left: 10px;
+           }
+        .box2 {
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            border-radius:10px;
+            margin-right: 10px;
+            float: right;
+        }
+    </style>
+    <!--    <link rel="stylesheet" href="css/styles.css?v=1.0">-->
+
+</head>
+
+<body style="margin:0;padding:0">
+<h1 id="mainHeading">Title</h1>
+
+<p id="firstParagraph">Simple Paragraph</p>
+
+<div class="box" id="rectangularBox"></div>
+
+<div class="box2" id="rectangularBox2"></div>
+<script>
+let element = document.getElementById('firstParagraph');
+element.style.color = '#e3e3e3';
+
+let element1 = document.getElementById('mainHeading');
+element1.style.fontSize ='50px';
+
+element1.addEventListener('click', function(){
+    if(element.style.color === 'red'){
+        element.style.color = 'blue';
+    }else{
+        element.style.color = 'red';
+    }
+});
+let element3 = document.getElementById('rectangularBox');
+element.addEventListener('click', function(){
+    if(element3.offsetLeft <= 50){
+        element3.style.marginLeft = (element3.offsetLeft + 10) + 'px';
+        console.log(element3.offsetLeft);
+    }
+    //if(element3.style.marginLeft =  )
+})
+</script>
+</body>
+</html>
